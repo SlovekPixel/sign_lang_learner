@@ -1,0 +1,210 @@
+.user--sidebar{
+    transition: .5s;
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    top: 0;
+    left: -25%;
+    background: white;
+
+    z-index: 100;
+    box-shadow: 10px 0px 27px 0px rgba(48, 50, 50, 0.14);
+}
+p.feedback{
+    color: #AEDD46;
+    font-size: 10px;
+    /* text-align: left!important; */
+}
+.user--sidebar.show{
+    left: 0;
+}
+
+.line {
+    cursor: pointer;
+    display: block;
+    z-index: unset;
+    transition: .5s;
+    width: 60px;
+    position: absolute;
+    right: -60px;
+    box-shadow: 0px 1px 35px rgba(38,132,254,0.06);
+    top: 0;
+    height: 100%;
+    background: white;
+}
+.line svg{
+    transform: rotate(90deg) translate(0, 50%);
+    position: absolute;
+    top: 48%;
+    left: -30px;
+
+}
+.emotionals-result{
+    padding-top: 25px;
+    overflow-y: scroll;
+    max-height: 660px;
+}
+.res-1{
+    font-size: 14px;
+}
+.scrollable{
+    min-height: 500px;
+}
+.sidebar--toggler{
+
+    position: absolute;
+    top: calc(50% - 40px);
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-top-left-radius: -100%;
+    right: -70px;
+    width: 50px;
+    height: 80px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+    cursor: pointer;
+}
+.sidebar--toggler.active{
+    right: -50px;
+}
+.sidebar--toggler:hover{
+
+}
+.sidebar--toggler svg{
+    width: 30px;
+    height: 30px;
+
+}
+.sidebar--toggler svg path{
+    fill: #AEDD46
+}
+.user--info--main{
+    padding: 50px 0 0 25px;
+}
+.user--profile{
+    overflow-y: scroll;
+    max-height: 100%;
+    min-height: 100%;
+    padding: 10px 0;
+
+}
+.user--profile label{
+    width: 100%;
+}
+.tab-nav{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-wrap: wrap;
+}
+.tab-nav .tab-name{
+    cursor: pointer;
+    flex-basis: 50%;
+    padding: 12px 0;
+    background: #858a90;
+    color: white;
+    text-align: center;
+}
+.tab-nav .tab-name:hover{
+    background: #702A87;
+}
+.tab-nav .tab-name.active{
+    background: #AEDD46;
+}
+
+.tab-body{
+    min-height: 200px;
+    max-height: 500px;
+    width: 100%;
+    padding: 10px;
+}
+.tab-body .tab-content{
+    display: none;
+}
+.tab-body .tab-content.show{
+    display: block;
+    height: 1000px;
+
+}
+.mobile-toggle-sidebar{
+    display: none;
+}
+@media (min-width: 768px) and (max-width: 1200px){
+    .user--sidebar{
+        width: 50%;
+        left: -50%;
+    }
+}
+@media (max-width: 767px){
+    .user--sidebar{
+        width: 100%;
+        left: -100%;
+    }
+    .sidebar--toggler{
+        display: none;
+        transition: .5s;
+    }
+    .sidebar--toggler.mobile--toggle{
+        right: 0;
+    }
+
+    .mobile-toggle-sidebar{
+        display: block;
+        position: fixed;
+        height: 35px;
+        width: 100%;
+        background: #AEDD46;
+        left: 0;
+        bottom: 0;
+        z-index: 100;
+        text-align: center;
+    }
+    .mobile-toggle-sidebar h3{
+        color: white;
+    }
+    .line.visible{
+        display: none;
+    }
+}
+
+
+
+
+.user--profile::-webkit-scrollbar{
+    background: whitesmoke;
+    width: 5px;
+}
+.user--profile::-webkit-scrollbar-button{
+    width: 5px;
+}
+.user--profile::-webkit-scrollbar-track{
+    background: whitesmoke;
+}
+.user--profile::-webkit-scrollbar-track-piece{
+    background: whitesmoke;
+ }
+.user--profile::-webkit-scrollbar-thumb{
+    background:#AEDD46;
+}
+
+.emotionals-result::-webkit-scrollbar{
+    background: whitesmoke;
+    width: 5px;
+}
+.emotionals-result::-webkit-scrollbar-button{
+    width: 5px;
+}
+.emotionals-result::-webkit-scrollbar-track{
+    background: whitesmoke;
+}
+.emotionals-result::-webkit-scrollbar-track-piece{
+    background: whitesmoke;
+ }
+ .emotionals-result::-webkit-scrollbar-thumb{
+    background:#AEDD46;
+}
