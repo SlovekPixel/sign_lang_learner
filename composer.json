@@ -1,10 +1,12 @@
 {
     "name": "laravel/laravel",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "An application for learning sign language words using video clips.",
     "keywords": [
         "framework",
-        "laravel"
+        "laravel",
+        "sign language",
+        "video"
     ],
     "license": "MIT",
     "require": {

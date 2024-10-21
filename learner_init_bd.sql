@@ -241,8 +241,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `admin`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'test', 'test@test.test', NULL, '$2y$10$U12xLqfqJd.Jes/1Eu0AM.ilr/LY2DP/yZv6TnGkldPDHrXnrX8VO', 1, NULL, NULL, NULL),
-(2, 'Вадим Рузахунов', 'a@a.a', NULL, '$2y$10$ftDaRUnX6Sn4TkhjbJ/B5uHxtRQDdogz9/Q218tuPvDyKFP8TF5je', NULL, NULL, '2020-12-10 01:30:08', '2020-12-10 01:30:08');
-
+(2, 'Вадим Рузахунов', 'a@a.a', NULL, '$2y$10$ftDaRUnX6Sn4TkhjbJ/B5uHxtRQDdogz9/Q218tuPvDyKFP8TF5je', NULL, NULL, '2020-12-10 01:30:08', '2020-12-10 01:30:08'),
+(3, 'Вячеслав Гордее', 'admin@admin.admin', NULL, '$2y$10$etDafsnX6SnsdkGRbJ/jd8aoalOduU.asS1/dlOa2LdmJ82LD2.dAA20f', NULL, NULL, '2020-12-11 13:32:17', '2020-12-11 13:32:17');
 --
 -- Индексы сохранённых таблиц
 --
