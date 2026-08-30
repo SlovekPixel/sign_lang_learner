@@ -20,6 +20,12 @@ docker compose up -d --build
 - email: `test@test.test`
 - пароль: `password`
 
+## Тесты
+
+```bash
+docker compose exec app php vendor/bin/phpunit
+```
+
 ## Интерфейс
 
 Главная
