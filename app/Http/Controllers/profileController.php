@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\pantomime;
 use Illuminate\Http\Request;
 use Auth;
-use app\User;
+use App\User;
 use App\face;
 use App\result;
 use Hash;
@@ -129,6 +129,16 @@ class profileController extends Controller
             return ['status' => 'not okay'];
         }
 
+    }
+
+    public function sub()
+    {
+        return redirect()->back();
+    }
+
+    public function unsub()
+    {
+        return redirect()->back();
     }
 
 }

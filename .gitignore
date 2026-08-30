@@ -1,14 +1,44 @@
+# Dependencies
 /node_modules
+/vendor
+
+# Environment & IDE
+.env
+.env.backup
+.env.*.local
+.idea
+.vscode
+*.swp
+.DS_Store
+Thumbs.db
+
+# Laravel runtime
 /public/hot
 /public/storage
 /storage/*.key
-/vendor
-/config/app.php
-.env
-.idea
-.env.backup
+/storage/pail
+/bootstrap/cache/*.php
+!/bootstrap/cache/.gitignore
+
+# Logs & caches
+npm-debug.log
+yarn-error.log
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
-npm-debug.log
-yarn-error.log
+
+# Uploaded / generated learning media (admin GIFs, test images)
+# Brand UI assets are allowlisted below via public/img/.gitignore
+/public/img/*
+!/public/img/.gitignore
+!/public/img/logo.png
+!/public/img/back--logo.png
+!/public/img/play.png
+!/public/img/stop.png
+!/public/img/icon.png
+!/public/favicon.png
+/public/favicon.jpg
+
+# Local Docker / tooling leftovers
+docker-compose.override.yml
+*.sql.gz

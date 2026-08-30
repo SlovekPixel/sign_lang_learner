@@ -1,47 +1,48 @@
 @extends('layouts.admin')
 
 @section('content')
-
-
+<div class="row">
     <div class="col-lg-5 enter-col upload-form">
         <form method="POST" enctype="multipart/form-data" action="{{ route('save.emot') }}">
             @csrf
             <div class="enter-container">
                 <div class="enter-img-cont text-center">
-                    <div class="logo text-center">
-                        ЛОГО
-                    </div>
-
+                    <img src="{{ asset('img/logo.png') }}" width="72" height="72" alt="Жесты">
+                </div>
+                <div class="text-center mb-3">
+                    <h2 style="font-family:Unbounded,sans-serif;font-size:18px;">Новый жест</h2>
                 </div>
                 <div class="enter-input-container">
-                    <label for="">
-                        <span>Гифка слова</span>
-                        <input class="enter-redaction" type="file" name="url">
+                    <label>
+                        <span>GIF слова</span>
+                        <input class="enter-redaction" type="file" name="url" accept="image/gif,image/*" required>
                     </label>
                 </div>
-
                 <div class="enter-input-container">
-                    <label for="">
+                    <label>
                         <span>Значение</span>
-                        <input class="enter-redaction" type="text" name="meaning">
+                        <input class="enter-redaction" type="text" name="meaning" required>
                     </label>
                 </div>
-
                 <div class="text-center">
-                    <input class="primary-but" type="submit" value="Отправить">
+                    <input class="primary-but" type="submit" value="Сохранить">
                 </div>
             </div>
         </form>
-
     </div>
-    <div class="col-12">
+    <div class="col-lg-7">
         <div class="row">
-            @foreach ($emotions as $emot)
-                <div class="col-4 text-center">
-                    <img src="{{ '/'. $emot->url }}" alt="">
-                    <h2>{{ $emot->meaning }}</h2>
+            @forelse ($emotions as $emot)
+                <div class="col-md-4 text-center mb-4">
+                    <img src="{{ asset($emot->url) }}" alt="{{ $emot->meaning }}" style="max-width:100%;border:1px solid #ddd6d3;background:#fff;">
+                    <h3 style="font-size:16px;margin-top:10px;font-family:Unbounded,sans-serif;">{{ $emot->meaning }}</h3>
                 </div>
-            @endforeach
+            @empty
+                <div class="col-12">
+                    <p style="color:#6b6563;">Пока нет загруженных жестов.</p>
+                </div>
+            @endforelse
         </div>
     </div>
+</div>
 @endsection

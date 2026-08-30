@@ -1,46 +1,35 @@
 # sign_lang_learner
-The goal of the work is to design and develop a web application that allows users to organize learning sign language with the help of tutorial videos.
 
-The application was developed using *MySQL, vue, webpack, phpmyadmin, Laravel*.
+Веб-приложение для изучения жестового языка: короткие GIF-ролики, режим обучения и игра на узнавание слов.
 
-## Install
-Php dependencies:
-```angular2html
-composer install
-```
-Node dependencies:
-```angular2html
-npm install
-```
-Generate key: 
-```angular2html
-php artisan key:generate
-```
-Migration and seeders:
-```angular2html
-php artisan migrate
-php artisan db:seed
-```
-Start:
-```angular2html
-php artisan serve
+Стек: **Laravel 6**, **MySQL**, **Docker** (PHP 7.4 + Apache).
+
+## Запуск
+
+```bash
+docker compose up -d --build
 ```
 
-## Interface
-<div align="center">
+| Сервис     | URL                         |
+|------------|-----------------------------|
+| Приложение | http://localhost:8000       |
+| phpMyAdmin | http://localhost:8081       |
 
-![main_window.png](readmeimg%2Fmain_window.png)
+Тестовый админ:
 
-View of the main window.
-<hr>
+- email: `test@test.test`
+- пароль: `password`
 
-![select_mode.png](readmeimg%2Fselect_mode.png)
+## Интерфейс
 
-View of the “Select Mode” button.
-<hr>
+Главная
 
-![settings.png](readmeimg%2Fsettings.png)
+![Главная](docs/screenshots/home.png)
 
-View of the setting.
-<hr>
-</div>
+Вход
+
+![Вход](docs/screenshots/login.png)
+
+Игра
+
+![Игра](docs/screenshots/game.png)
